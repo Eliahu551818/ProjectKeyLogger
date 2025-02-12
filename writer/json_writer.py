@@ -1,4 +1,4 @@
-from writer_interface import IWriter
+from .writer_interface import IWriter
 import json
 import os
 

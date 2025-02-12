@@ -1,4 +1,4 @@
-from Encryption import IEncryptor
+from encryption_interface import IEncryptor
 
 
 class Encryption(IEncryptor):

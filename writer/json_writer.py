@@ -31,7 +31,6 @@ class JsonWriter(IWriter):
         with open(path, 'r') as file:
             try:
                 data = json.load(file)
-                print(data)
             except json.JSONDecodeError:
                 data = {}  # Handle empty or corrupted files
 

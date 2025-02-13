@@ -42,7 +42,7 @@ class JsonWriter(IWriter):
 
         # Write back to the file
         with open(path, 'w') as file:
-            json.dump(data, file, indent=4)
+            json.dump(data, file, indent=4, ensure_ascii=False)
 
         return True
 

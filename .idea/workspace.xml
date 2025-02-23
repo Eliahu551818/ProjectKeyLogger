@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fb3ea7a4-0a3c-4bc8-8370-0f297a0aa655" name="Changes" comment="Adjustment to windows version">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Targets Dashboard/HomePage.HTML" beforeDir="false" afterPath="$PROJECT_DIR$/Targets Dashboard/HomePage.HTML" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Targets Dashboard/Scripts.js" beforeDir="false" afterPath="$PROJECT_DIR$/Targets Dashboard/Scripts.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Targets Dashboard/Style.CSS" beforeDir="false" afterPath="$PROJECT_DIR$/Targets Dashboard/Style.CSS" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Targets Dashboard/UserData.HTML" beforeDir="false" />
-    </list>
+    <list default="true" id="fb3ea7a4-0a3c-4bc8-8370-0f297a0aa655" name="Changes" comment="Adjustment to windows version" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

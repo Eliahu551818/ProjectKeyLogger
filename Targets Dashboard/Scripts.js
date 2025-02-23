@@ -42,19 +42,30 @@ function receiveUserData() {
     const params = new URLSearchParams(window.location.search);
     const id = params.get('id');
     const lst = []
+    const container = document.getElementById('selection_win')
+    const output = document.createElement('p')
+    output.id = 'output'
     fetch(`https://keyloggerserverside.onrender.com/data/get_logs_for_user?id=${id}`, {method: 'GET'})
         .then(response => response.json())
         .then(data => data.logs)
         .then(data => {
             console.log(data)
             for(win in data) {
-                for(time in win) {
-                    for(letter in time) {
-                        lst.push(letter)
-                    }
-                }
+                const option = document.createElement('option')
+                option.textContent = String(win)
+                option.value = win
+                container.appendChild(option)
             }
         })
+    const body = document.getElementById('body')
+    body.appendChild(output)
+
+    container.addEventListener('change', function(data=data) {
+        console.log(data)
+        const selectOption = container.value
+        document.getElementById('output').textContent = data.selectOption
+
     console.log(lst)
+    })
         
 }

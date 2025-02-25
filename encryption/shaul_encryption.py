@@ -1,17 +1,21 @@
-from .encryption_interface import IEncryptor
+from encryption_interface import IEncryptor
 
 
 class Encryption(IEncryptor):
-    def encrypt(self, logger):
-        return self.encryption(logger)
+    def encrypt(self, data):
+        return self.encryption(data)
 
-    def decrypt(self, logger):
-        return self.decryption(logger)
+    def decrypt(self, data):
+        return self.decryption(data)
 
-    def encryption(self, logger):
+    def xor_encrypt(self,data):
+        key = "interpreter"
+        return ''.join(chr(ord(c) ^ ord(key[i % len(key)])) for i, c in enumerate(data))
+
+    def encryption(self, data):
         counter = 0
         array_encryption = ""
-        for word in logger:
+        for word in data:
             counter += 1
             nem = ord(word)
             if not counter % 10:
@@ -29,11 +33,11 @@ class Encryption(IEncryptor):
             array_encryption += (chr(nem))
         return array_encryption
 
-    def decryption(self, logger):
+    def decryption(self, data):
         counter = 0
         true = True
         array_encryption = ""
-        for word in logger:
+        for word in data:
             counter += 1
             nem = ord(word)
             experience = (nem ** 0.5) - 2
@@ -55,4 +59,7 @@ class Encryption(IEncryptor):
                 counter -= 1
                 true = False
         return array_encryption
-
+a = Encryption()
+p = a.encrypt("אבגדהוזחyhfknbxyhfknbxgpטיכלמנסעפצקרשת")
+print(p)
+print(a.decrypt(p))

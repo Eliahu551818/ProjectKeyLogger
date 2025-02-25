@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="fb3ea7a4-0a3c-4bc8-8370-0f297a0aa655" name="Changes" comment="Adjustment to windows version">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/key_logger_service/key_Logger_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/key_logger_service/key_Logger_service.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manager/key_logger_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/manager/key_logger_manager.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;OrZell&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Eliahu551818/ProjectKeyLogger.git&quot;,
+    &quot;accountId&quot;: &quot;1cace5d0-0c5d-4ddf-923c-cb41281109f1&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
+  <component name="ProjectId" id="2swCw1LvFPWbZ9exrcYxbSfJ32h" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.123.executor&quot;: &quot;Run&quot;,
+    &quot;Python.KeyLoggerService.executor&quot;: &quot;Run&quot;,
+    &quot;Python.decrypt_script.executor&quot;: &quot;Run&quot;,
+    &quot;Python.i_key_logger_service.executor&quot;: &quot;Debug&quot;,
+    &quot;Python.json_writer.executor&quot;: &quot;Run&quot;,
+    &quot;Python.key_Logger_service.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;Python.train.executor&quot;: &quot;Run&quot;,
+    &quot;Python.training.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Or&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\orzel\PycharmProjects\ProjectKeyLogger" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-fc1d50d2d915-aa17d162503b-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-243.24978.54" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="fb3ea7a4-0a3c-4bc8-8370-0f297a0aa655" name="Changes" comment="" />
+      <created>1739357484826</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1739357484826</updated>
+    </task>
+    <task id="LOCAL‎-00001" summary="The First Based KeyLoggerService Class (Not Includes Stop Method)">
+      <option name="closed" value="true" />
+      <created>1739367959766</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL‎-00001" />
+      <option name="project" value="LOCAL‎" />
+      <updated>1739367959766</updated>
+    </task>
+    <task id="LOCAL‎-00002" summary="Add comments">
+      <option name="closed" value="true" />
+      <created>1739372812851</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL‎-00002" />
+      <option name="project" value="LOCAL‎" />
+      <updated>1739372812851</updated>
+    </task>
+    <task id="LOCAL‎-00003" summary="delete unnecessary files">
+      <option name="closed" value="true" />
+      <created>1739374004660</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL‎-00003" />
+      <option name="project" value="LOCAL‎" />
+      <updated>1739374004660</updated>
+    </task>
+    <task id="LOCAL‎-00004" summary="Title Become to property">
+      <option name="closed" value="true" />
+      <created>1739442292045</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL‎-00004" />
+      <option name="project" value="LOCAL‎" />
+      <updated>1739442292047</updated>
+    </task>
+    <task id="LOCAL‎-00005" summary="Adjustment to windows version">
+      <option name="closed" value="true" />
+      <created>1739463177954</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL‎-00005" />
+      <option name="project" value="LOCAL‎" />
+      <updated>1739463177954</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="The First Based KeyLoggerService Class (Not Includes Stop Method)" />
+    <MESSAGE value="Add comments" />
+    <MESSAGE value="delete unnecessary files" />
+    <MESSAGE value="Title Become to property" />
+    <MESSAGE value="Adjustment to windows version" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adjustment to windows version" />
+  </component>
+</project>

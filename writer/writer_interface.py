@@ -3,7 +3,7 @@ from abc import ABC, abstractmethod
 
 class IWriter(ABC):
     @abstractmethod
-    def write(self, data: str, target_id: str) -> bool:
+    def write(self, data: str) -> bool:
         """
         Write data to a destination.
 

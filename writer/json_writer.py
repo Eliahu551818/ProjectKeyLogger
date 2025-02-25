@@ -4,7 +4,7 @@ import os
 
 class JsonWriter(IWriter):
     
-    def write(self, data: dict, target_id: str = "0") -> bool:
+    def write(self, data: dict) -> bool:
         '''
         Parameter:
         data (dict):
@@ -13,13 +13,15 @@ class JsonWriter(IWriter):
                 "data": {
                     "WindowUsed": string of data,
                     "Chrome":"ghbibubjbkd ddsx"
-                }
+                },
+                "mac_address":"4564.445"
             }
         '''
 
         assert ("time" in data) and ("data" in data)
         
         time: str = data.get("time")
+        target_id : str = data.get("mac_address")
         new_data: dict = data.get("data")
         path: str = os.path.abspath(f"./data/{target_id}.json")
 

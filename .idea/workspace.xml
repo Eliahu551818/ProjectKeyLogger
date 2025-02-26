@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fb3ea7a4-0a3c-4bc8-8370-0f297a0aa655" name="Changes" comment="Adjustment to windows version">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/key_logger_service/key_Logger_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/key_logger_service/key_Logger_service.py" afterDir="false" />
-    </list>
+    <list default="true" id="fb3ea7a4-0a3c-4bc8-8370-0f297a0aa655" name="Changes" comment="Adjustment to windows version" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -138,5 +135,15 @@
     <MESSAGE value="Title Become to property" />
     <MESSAGE value="Adjustment to windows version" />
     <option name="LAST_COMMIT_MESSAGE" value="Adjustment to windows version" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/key_logger_service/key_Logger_service.py</url>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

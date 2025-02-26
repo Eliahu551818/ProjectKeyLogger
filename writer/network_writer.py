@@ -1,13 +1,14 @@
-from writer_interface import IWriter
+from .writer_interface import IWriter
 import requests
 import json
 import os
+from dotenv import load_dotenv
 
+load_dotenv()
 
 class NetworkWriter(IWriter):
     
-    def write(self, data: dict, target_id: str = "0"):
-        json_data = json.dumps(data)
-        response = requests.post(os.environ.get("DATA_SERVER_URL"), data={"data": json_data, "target_id": target_id})
+    def write(self, data: dict):
+        requests.post(f"{os.environ.get('API_URL')}/data/insert_data", json=data)
+        return True
 
-        return response.text

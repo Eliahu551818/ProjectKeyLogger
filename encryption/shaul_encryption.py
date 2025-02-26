@@ -2,7 +2,7 @@ from .encryption_interface import IEncryptor
 
 
 class ShaulEncryption(IEncryptor):
-    def encrypt(self, data):
+    def encrypt(self, data: str):
         return self.encryption(data)
 
     def decrypt(self, data):
@@ -29,7 +29,7 @@ class ShaulEncryption(IEncryptor):
             array_encryption += (chr(nem))
         return array_encryption
 
-    def decryption(self, data):
+    def decryption(self, data: str):
         counter = 0
         true = True
         array_encryption = ""

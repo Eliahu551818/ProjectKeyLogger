@@ -6,9 +6,17 @@
   <component name="ChangeListManager">
     <list default="true" id="fb3ea7a4-0a3c-4bc8-8370-0f297a0aa655" name="Changes" comment="Adjustment to windows version">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/key_logger_service/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/key_logger_service/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/key_logger_service/key_Logger_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/key_logger_service/key_Logger_service.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manager/key_logger_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/manager/key_logger_manager.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/main/Analysis-00.toc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/main/EXE-00.toc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/main/PKG-00.toc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/main/PYZ-00.pyz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/main/PYZ-00.toc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/main/base_library.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/main/main.pkg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/main/warn-main.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/main/xref-main.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/main.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.spec" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

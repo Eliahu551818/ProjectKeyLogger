@@ -1,5 +1,5 @@
 data/*.json
 writer/__pycache__/
-key_logger_service/__pycache__/
+service/__pycache__/
 manager/__pycache__/
 encryption/__pycache__/

